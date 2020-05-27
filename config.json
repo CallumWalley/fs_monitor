@@ -1,16 +1,22 @@
 {
     "triggers": {
+	"trigger0":{
+	    "threshold":90,
+	    "reset":70,
+	    "level": "warning",
+	    "message":"{directory}  {username}  {fullname}  disk:  *{used_percent}%* of {available}   inodes: *{inodes_used_percent}%* of {inodes_used}"
+	},
         "trigger1": {
             "threshold": 95,
             "reset": 80,
             "level": "warning",
-            "message": "directory: '{1}', user: '{0}', disk:  {3}% of {2}, inodes: {7}% of {5}"
+            "message": "{directory}  {username}  {fullname}  disk:  *{used_percent}%* of {available}   inodes: *{inodes_used_percent}%* of {inodes_used}"
         },
         "trigger2": {
             "threshold": 105,
             "reset": 90,
             "level": "error",
-            "message": "directory: '{1}', user: '{0}', disk:  {3}% of {2}, inodes: {7}% of {5}"
+            "message": "{directory}  {username}  {fullname}   disk:  *{used_percent}%* of {available}   inodes: *{inodes_used_percent}%* of {inodes_used}"
         }
     }
 }
